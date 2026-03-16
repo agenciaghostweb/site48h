@@ -229,7 +229,7 @@
 
                     <div id="carousel-track" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth hide-scrollbar py-4 -mx-4 px-4 gap-6">
                         
-                        <!-- Card Modelo 1 -->
+                        <!-- Card Modelo 1 (Cliente Real: Duas Rodas BC) -->
                         <div class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] flex-shrink-0 snap-center">
                             <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200 hover:shadow-xl transition-all hover:-translate-y-1 duration-300 group/card h-full flex flex-col">
                                 <div class="w-full aspect-[4/3] bg-white rounded-t-lg border border-slate-200 overflow-hidden relative mb-5 shadow-inner">
@@ -239,13 +239,14 @@
                                         <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
                                     </div>
                                     <div class="absolute top-7 left-0 w-full h-[calc(100%-28px)] overflow-hidden bg-white">
-                                        <iframe class="mini-iframe w-[400%] h-[400%] origin-top-left scale-[0.25] pointer-events-none" tabindex="-1"></iframe>
+                                        <!-- Engenharia: Removida a classe 'mini-iframe' e inserido o link no src -->
+                                        <iframe src="https://www.duasrodasbc.com.br" class="w-[400%] h-[400%] origin-top-left scale-[0.25] pointer-events-none" tabindex="-1"></iframe>
                                     </div>
                                 </div>
-                                <h3 class="font-bold text-xl text-slate-900 mb-1">Modelo Institucional</h3>
-                                <p class="text-sm text-slate-500 mb-6 flex-grow">Apresentação corporativa completa, focada em transmitir autoridade para a sua marca.</p>
-                                <!-- Nota de Engenharia: Atualizei a função para (urlOuId, isInternal) -->
-                                <button onclick="openModal('hero', true)" class="w-full py-2.5 bg-brand-blue/5 text-brand-blue font-bold rounded-lg group-hover/card:bg-brand-blue group-hover/card:text-white transition-colors border border-brand-blue/20">
+                                <h3 class="font-bold text-xl text-slate-900 mb-1">Duas Rodas BC</h3>
+                                <p class="text-sm text-slate-500 mb-6 flex-grow">Site desenvolvido para a Duas Rodas BC. Estrutura otimizada para performance e apresentação de serviços.</p>
+                                <!-- Engenharia: URL real inserida e flag de isInternal definida como 'false' -->
+                                <button onclick="openModal('https://www.duasrodasbc.com.br', false)" class="w-full py-2.5 bg-brand-blue/5 text-brand-blue font-bold rounded-lg group-hover/card:bg-brand-blue group-hover/card:text-white transition-colors border border-brand-blue/20">
                                     Ver Detalhes do Projeto
                                 </button>
                             </div>
