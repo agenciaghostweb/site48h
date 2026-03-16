@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site48h - Agência Digital | Sites e Landing Pages em 48 horas</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuração de Cores Personalizadas no Tailwind (Branding Azul e Laranja) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#1e3a8a',    // Azul escuro profissional
+                            light: '#3b82f6',   // Azul claro para destaques
+                            orange: '#f97316',  // Laranja para ação/velocidade
+                            dark: '#0f172a'     // Cor escura para textos
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Fonte Inter do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Ícones Lucide -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(to right, #1e3a8a, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- CABEÇALHO / NAVBAR -->
+    <header class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                    <i data-lucide="zap" class="text-brand-orange w-8 h-8"></i>
+                    <span class="text-3xl font-extrabold tracking-tight">
+                        <span class="text-brand-blue">site</span><span class="text-brand-orange">48h</span>
+                    </span>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#como-funciona" class="text-slate-600 hover:text-brand-blue font-medium transition-colors">Como Funciona</a>
+                    <a href="#servicos" class="text-slate-600 hover:text-brand-blue font-medium transition-colors">Serviços</a>
+                    <a href="#beneficios" class="text-slate-600 hover:text-brand-blue font-medium transition-colors">Benefícios</a>
+                </nav>
+
+                <!-- Botão CTA Desktop -->
+                <div class="hidden md:flex items-center">
+                    <a href="#contato" class="bg-brand-orange hover:bg-orange-600 text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-orange-500/30 transition-all transform hover:-translate-y-0.5">
+                        Quero meu site
+                    </a>
+                </div>
+
+                <!-- Menu Mobile (Hamburguer) - Apenas visual para o protótipo -->
+                <div class="md:hidden flex items-center">
+                    <button class="text-slate-600 hover:text-brand-blue focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION (Dobra principal) -->
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Texto da Hero -->
+                    <div class="text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 text-brand-blue font-medium text-sm mb-6">
+                            <i data-lucide="clock" class="w-4 h-4"></i>
+                            O mercado não espera. Nem você deveria.
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                            Seu negócio no ar em <br>
+                            <span class="text-brand-orange">48 horas.</span> Sem desculpas.
+                        </h1>
+                        <p class="text-lg text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+                            Criamos Landing Pages de alta conversão e Sites Institucionais impecáveis. 
+                            Design premium, velocidade máxima e foco nos seus resultados.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <a href="#contato" class="bg-brand-blue hover:bg-blue-800 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-blue-900/20 transition-all flex items-center justify-center gap-2">
+                                Iniciar Projeto Agora
+                                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                            </a>
+                            <a href="#servicos" class="bg-white hover:bg-slate-50 text-slate-700 border border-slate-200 px-8 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center">
+                                Ver Serviços
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Imagem/Ilustração da Hero -->
+                    <div class="relative hidden lg:block">
+                        <!-- Elemento decorativo de fundo -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-blue-100 to-orange-50 rounded-full blur-3xl opacity-50 transform scale-110"></div>
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Desenvolvimento de Sites" class="relative z-10 rounded-2xl shadow-2xl border border-white/50 transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+                        
+                        <!-- Badge flutuante -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-4 z-20 animate-bounce" style="animation-duration: 3s;">
+                            <div class="bg-green-100 p-3 rounded-full text-green-600">
+                                <i data-lucide="check-circle" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-semibold uppercase">Entrega Garantida</p>
+                                <p class="text-lg font-bold text-slate-900">Prazo Recorde</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: COMO FUNCIONA (Processo) -->
+        <section id="como-funciona" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Como funciona a mágica das 48h?</h2>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto">Um processo enxuto e otimizado para não perder tempo com o que não importa.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
+                    <!-- Linha conectora (apenas desktop) -->
+                    <div class="hidden md:block absolute top-12 left-[15%] right-[15%] h-0.5 bg-slate-200 z-0"></div>
+
+                    <!-- Passo 1 -->
+                    <div class="relative z-10 flex flex-col items-center text-center">
+                        <div class="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center mb-6 shadow-inner border-4 border-white">
+                            <i data-lucide="clipboard-list" class="w-10 h-10 text-brand-blue"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">1. O Briefing</h3>
+                        <p class="text-slate-600">Você responde a um formulário rápido com as informações da sua empresa e escolhe o estilo desejado.</p>
+                    </div>
+
+                    <!-- Passo 2 -->
+                    <div class="relative z-10 flex flex-col items-center text-center">
+                        <div class="w-24 h-24 bg-orange-50 rounded-full flex items-center justify-center mb-6 shadow-inner border-4 border-white">
+                            <i data-lucide="code-2" class="w-10 h-10 text-brand-orange"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">2. A Construção</h3>
+                        <p class="text-slate-600">Nossa equipe entra em ação. Design, copy e código são desenvolvidos simultaneamente em alta velocidade.</p>
+                    </div>
+
+                    <!-- Passo 3 -->
+                    <div class="relative z-10 flex flex-col items-center text-center">
+                        <div class="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center mb-6 shadow-inner border-4 border-white">
+                            <i data-lucide="rocket" class="w-10 h-10 text-brand-blue"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">3. O Lançamento</h3>
+                        <p class="text-slate-600">Em até 48 horas úteis, enviamos o link do seu site aprovado, testado e pronto para receber clientes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: SERVIÇOS -->
+        <section id="servicos" class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">O que nós construímos</h2>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto">Especialistas em páginas focadas em resultados. Sem firulas, 100% funcionais.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- Card Serviço 1 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group">
+                        <div class="w-14 h-14 bg-brand-blue/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-blue transition-colors">
+                            <i data-lucide="mouse-pointer-click" class="w-7 h-7 text-brand-blue group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Landing Pages</h3>
+                        <p class="text-slate-600 mb-6">Páginas de alta conversão para vendas de produtos, infoprodutos, captação de leads ou lançamento de campanhas. Design estratégico focado no clique.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-700"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> Copywriting persuasivo embutido</li>
+                            <li class="flex items-center gap-3 text-slate-700"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> Integração com WhatsApp/CRM</li>
+                            <li class="flex items-center gap-3 text-slate-700"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> Carregamento ultrarrápido</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card Serviço 2 -->
+                    <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-shadow border border-slate-100 group">
+                        <div class="w-14 h-14 bg-brand-orange/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-orange transition-colors">
+                            <i data-lucide="layout-template" class="w-7 h-7 text-brand-orange group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Sites Institucionais</h3>
+                        <p class="text-slate-600 mb-6">O cartão de visitas moderno e definitivo para a sua empresa. Transmita autoridade, apresente seus serviços e seja encontrado no Google.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-slate-700"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> Até 5 seções personalizadas</li>
+                            <li class="flex items-center gap-3 text-slate-700"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> Otimização básica para SEO</li>
+                            <li class="flex items-center gap-3 text-slate-700"><i data-lucide="check" class="w-5 h-5 text-green-500"></i> Totalmente responsivo (Mobile First)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO: BENEFÍCIOS (Por que escolher a site48h) -->
+        <section id="beneficios" class="py-20 bg-brand-dark text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Por que somos diferentes das agências tradicionais?</h2>
+                        <p class="text-slate-300 text-lg mb-8">Agências comuns demoram meses para entregar um projeto básico. Nós cortamos a burocracia e entregamos tecnologia de ponta em tempo recorde.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i data-lucide="smartphone" class="w-6 h-6 text-brand-orange"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl">100% Responsivo</h4>
+                                    <p class="text-slate-400">Seu site perfeito no celular, tablet e computador.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i data-lucide="gauge" class="w-6 h-6 text-brand-orange"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl">Performance Máxima</h4>
+                                    <p class="text-slate-400">Código limpo para carregamento em milissegundos. Visitantes não esperam.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i data-lucide="shield-check" class="w-6 h-6 text-brand-orange"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl">Hospedagem Inclusa</h4>
+                                    <p class="text-slate-400">Nós cuidamos da parte técnica chata. Seu site seguro e online 24/7.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <!-- Imagem representativa de código/design -->
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Dashboard e Performance" class="rounded-2xl shadow-2xl border border-slate-700 opacity-90">
+                        <div class="absolute inset-0 bg-brand-blue mix-blend-overlay rounded-2xl opacity-20"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section id="contato" class="py-24 bg-brand-blue relative overflow-hidden">
+            <!-- Padrão de fundo -->
+            <div class="absolute inset-0 opacity-10">
+                <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M0 40V0H40" fill="none" stroke="currentColor" stroke-width="2"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grid-pattern)"/>
+                </svg>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">Pronto para acelerar seu negócio?</h2>
+                <p class="text-xl text-blue-100 mb-10">Fale com nossa equipe pelo WhatsApp. O cronômetro das 48 horas começa a rodar após o nosso alinhamento.</p>
+                
+                <a href="#" class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 py-5 rounded-full font-bold text-xl shadow-2xl transition-transform transform hover:scale-105">
+                    <i data-lucide="message-circle" class="w-7 h-7"></i>
+                    Chamar no WhatsApp
+                </a>
+                <p class="mt-6 text-sm text-blue-200">* 48 horas úteis após a aprovação do briefing e envio de materiais.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <i data-lucide="zap" class="text-brand-orange w-6 h-6"></i>
+                        <span class="text-2xl font-extrabold tracking-tight text-white">
+                            site<span class="text-brand-orange">48h</span>
+                        </span>
+                    </div>
+                    <p class="text-sm">A agência digital mais rápida do Brasil. Transformamos ideias em páginas de alta conversão em tempo recorde.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#como-funciona" class="hover:text-white transition-colors">Como Funciona</a></li>
+                        <li><a href="#servicos" class="hover:text-white transition-colors">Serviços</a></li>
+                        <li><a href="#beneficios" class="hover:text-white transition-colors">Benefícios</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i> contato@site48h.com.br</li>
+                        <li class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i> Atendimento 100% Remoto</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 pt-8 text-sm text-center">
+                <p>&copy; 2026 site48h.com.br - Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inicialização dos Ícones -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
